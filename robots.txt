@@ -1,0 +1,6 @@
+# Permite que todos os buscadores rastreiem o site
+User-agent: *
+Allow: /
+
+# Indica onde está o sitemap
+Sitemap: https://jpdaquebrada.github.io/Prime-Frontend-Solutions/sitemap.xml
