@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Frontend Solutions - Cinemático</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0B0B1E;color:#fff;scroll-behavior:smooth;perspective:1200px;overflow-x:hidden;}
+
+/* Header */
+header{
+position:fixed;top:0;left:0;width:100%;
+background:rgba(11,11,30,0.95);
+padding:20px 50px;
+display:flex;justify-content:space-between;align-items:center;
+z-index:1000;
+box-shadow:0 4px 20px rgba(0,0,0,0.7);
+}
+header h1{color:#FF6F3C;font-size:28px;font-weight:700;}
+nav a{margin:0 15px;color:#fff;font-weight:500;transition:0.3s;}
+nav a:hover{color:#FFB400;}
+
+/* Hero */
+#particles-js{position:absolute;width:100%;height:100%;z-index:0;}
+.hero{position:relative;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#0B0B1E,#1A1A2E);overflow:hidden;z-index:1;}
+.hero::after{content:'';background:linear-gradient(60deg,rgba(255,111,60,0.15),rgba(255,180,0,0.15));position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;filter:blur(120px);}
+.hero h2{font-size:64px;font-weight:700;margin-bottom:20px;color:#FFB400;text-shadow:2px 2px 20px rgba(0,0,0,0.9);}
+.hero p{font-size:22px;margin-bottom:40px;text-shadow:1px 1px 15px rgba(0,0,0,0.8);}
+.hero a{background:linear-gradient(270deg,#FF6F3C,#FFB400);padding:25px 60px;font-size:24px;border-radius:25px;color:white;text-transform:uppercase;font-weight:700;animation:pulse 1.5s infinite alternate,floatBtn 2.5s ease-in-out infinite;box-shadow:0 0 30px #FF6F3C,0 0 60px #FFB400;transition:transform 0.3s;}
+.hero a:hover{transform:scale(1.25) rotate(-3deg);}
+
+/* Animations */
+@keyframes pulse{0%{box-shadow:0 0 25px #FF6F3C,0 0 50px #FFB400;}100%{box-shadow:0 0 40px #FF6F3C,0 0 70px #FFB400;}}
+@keyframes floatBtn{0%{transform:translateY(0px);}50%{transform:translateY(-20px);}100%{transform:translateY(0px);}}
+
+section{padding:140px 50px;position:relative;transform-style:preserve-3d;transition:all 1s ease;}
+section h2{font-size:46px;margin-bottom:50px;text-align:center;color:#FF6F3C;opacity:0;transform:translateY(50px);}
+.cards,.services .grid,.testimonials .grid{display:flex;justify-content:center;flex-wrap:wrap;gap:50px;}
+.card,.service-card,.testimonial{background:rgba(255,255,255,0.05);padding:35px;border-radius:25px;width:300px;text-align:center;box-shadow:0 10px 50px rgba(0,0,0,0.7);transition:transform 0.5s,box-shadow 0.5s;opacity:0;transform:translateY(50px);}
+.card:hover,.service-card:hover,.testimonial:hover{transform:rotateY(25deg) translateY(-20px) scale(1.08);box-shadow:0 25px 60px rgba(0,0,0,0.9);}
+.card h3,.service-card h3{color:#FFB400;margin-bottom:18px;}
+.card p,.service-card p,.testimonial p{font-size:17px;color:#fff;}
+
+/* CTA Final */
+.cta-final{background:#1A1A2E;text-align:center;padding:140px 20px;perspective:1000px;}
+.cta-final h2{font-size:52px;margin-bottom:40px;color:#FFB400;opacity:0;transform:translateY(50px);}
+.cta-final a{background:linear-gradient(270deg,#FF6F3C,#FFB400);padding:30px 70px;font-size:26px;border-radius:30px;display:inline-block;animation:pulse 1.5s infinite alternate,floatBtn 2.5s ease-in-out infinite;box-shadow:0 0 35px #FF6F3C,0 0 65px #FFB400;font-weight:700;transition:transform 0.3s;}
+.cta-final a:hover{transform:scale(1.25) rotate(-3deg);}
+
+/* Footer */
+footer{background:#0B0B1E;color:#fff;padding:60px;text-align:center;}
+footer a{color:#FF6F3C;transition:0.3s;}
+footer a:hover{color:#FFB400;}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Prime Frontend Solutions</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">Sobre</a>
+<a href="#services">Serviços</a>
+<a href="#testimonials">Depoimentos</a>
+<a href="#contact">Contato</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div id="particles-js"></div>
+<h2>Seu próximo nível digital começa aqui</h2>
+<p>Sites e estratégias digitais que prendem atenção e convertem visitantes em clientes.</p>
+<a href="https://wa.me/+244952461653" target="_blank">Clique e domine seu mercado!</a>
+</section>
+
+<section id="about">
+<h2>Quem Somos</h2>
+<p>Aplicamos psicologia, estratégia e tecnologia para criar experiências digitais que impressionam e influenciam. Mais de 50 clientes satisfeitos.</p>
+<div class="cards">
+<div class="card"><h3>Rapidez</h3><p>Entrega ultrarrápida sem perder qualidade e impacto psicológico.</p></div>
+<div class="card"><h3>Confiança</h3><p>Autoridade digital que gera influência real sobre seus visitantes.</p></div>
+<div class="card"><h3>Resultados</h3><p>Sites que convertem, aumentam vendas e fortalecem sua marca.</p></div>
+</div>
+</section>
+
+<section class="services" id="services">
+<h2>Nossos Serviços</h2>
+<div class="grid">
+<div class="service-card"><h3>Desenvolvimento Frontend</h3><p>Design responsivo e persuasivo, para prender atenção e engajar.</p></div>
+<div class="service-card"><h3>Otimização de Performance</h3><p>Velocidade máxima e UX estratégica com gatilhos de persuasão.</p></div>
+<div class="service-card"><h3>Consultoria Digital</h3><p>Planejamento baseado em psicologia e influência para resultados reais.</p></div>
+<div class="service-card"><h3>Manutenção & Suporte</h3><p>Plataforma segura, atualizada e confiável para manter autoridade.</p></div>
+</div>
+</section>
+
+<section class="testimonials" id="testimonials">
+<h2>O que nossos clientes dizem</h2>
+<div class="grid">
+<div class="testimonial"><p>"Revolucionaram nosso site – vendas aumentaram em 50%!"</p><span>– Cliente X</span></div>
+<div class="testimonial"><p>"Profissionalismo e resultado real. Recomendo sem pensar duas vezes."</p><span>– Cliente Y</span></div>
+<div class="testimonial"><p>"Equipe incrível e atendimento impecável, superou expectativas."</p><span>– Cliente Z</span></div>
+</div>
+</section>
+
+<section class="cta-final" id="contact">
+<h2>Pronto para dominar seu mercado digital?</h2>
+<a href="https://wa.me/+244952461653" target="_blank">Clique e seja imbatível!</a>
+</section>
+
+<footer>
+<p>Prime Frontend Solutions – Transformando negócios com estratégia, tecnologia e persuasão.</p>
+<p>Contato: <a href="https://wa.me/+244952461653" target="_blank">+244 952 46 1653</a></p>
+</footer>
+
+<script>
+particlesJS("particles-js", {
+    "particles": {
+        "number":{"value":180,"density":{"enable":true,"value_area":900}},
+        "color":{"value":"#FFB400"},
+        "shape":{"type":"circle"},
+        "opacity":{"value":0.8,"random":true},
+        "size":{"value":4,"random":true},
+        "line_linked":{"enable":true,"distance":170,"color":"#FF6F3C","opacity":0.5,"width":1},
+        "move":{"enable":true,"speed":5,"direction":"none","random":true,"straight":false,"out_mode":"out"}
+    },
+    "interactivity":{
+        "detect_on":"canvas",
+        "events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},
+        "modes":{"repulse":{"distance":150},"push":{"particles_nb":6}}
+    },
+    "retina_detect":true
+});
+
+// Scroll Animation Cinemático
+const sections=document.querySelectorAll('section');
+window.addEventListener('scroll',()=>{sections.forEach(sec=>{let top=sec.getBoundingClientRect().top; if(top<window.innerHeight-100){sec.querySelectorAll('h2, p, .card, .service-card, .testimonial').forEach(el=>{el.style.opacity='1'; el.style.transform='translateY(0)';});}});});
+
+// Cards follow mouse
+document.addEventListener('mousemove',e=>{
+let cards=document.querySelectorAll('.card, .service-card, .testimonial');
+cards.forEach(card=>{
+let x=(window.innerWidth/2 - e.clientX)/25;
+let y=(window.innerHeight/2 - e.clientY)/25;
+card.style.transform=`rotateY(${x}deg) rotateX(${y}deg) scale(1.05)`;
+});
+});
+</script>
+
+</body>
+</html>
+
+
